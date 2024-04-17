@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+            overflow: hidden;
+        }
+
+        #heading {
+            text-align: center;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .container{
+            width: 97%;
+            height: 90vh;
+            display: flex;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-direction: column;
+        }
+
+        #article-1{
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #article-2{
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #article-3{
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #article-4{
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #article-5{
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    a{
+        color: white;
+        width: fit-content;
+        height: fit-content;
+    }
+
+        .edit{
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            margin-right: 20px;
+            font-size: large;
+        }
+
+        .title{
+            margin-left: 20px;
+        }
+    </style>
+    <title>Article</title>
+</head>
+
+<body>
+    <section>
+        <h1 id="heading">ARTICLE</h1>
+        <div class="container">
+            <div id="article-1">
+                <a href="/article-1" class="not_underline">
+                    <% if(locals.blog[0]){ %>
+                        <h1 class="title">
+                            <%= blog[0].title %>
+                        </h1>
+                        </a>
+                        <div class="edit">
+                            <a href="/blog-form" class="underline">
+                                <p>edit</p>
+                            </a>
+                            <!-- Use an anchor tag instead of a form and button -->
+                            <a href="/delete/<%= locals.index[0] %>" class="delete-link underline"><p>Delete</p></a>
+                            </div>
+                <% } %>
+            </div>
+
+            <br>
+
+            <div id="article-2">
+                <a href="/article-2" class="not_underline">
+                    <% if(locals.blog[1]){ %>
+                        <h1 class="title">
+                            <%= blog[1].title %>
+                        </h1>
+                        </a>
+                        <div>
+                        <a href="/blog-form-1" class="underline edit">
+                            <p>edit</p>
+                        </a>
+                        </div>
+                <% } %>
+            </div>
+
+            <br>
+
+            <div id="article-3">
+                <a href="/article-3" class="not_underline">
+                    <% if(locals.blog[2]){ %>
+                        <h1 class="title">
+                            <%= blog[2].title %>
+                        </h1>
+                    </a>
+                        <div>
+                        <a href="/blog-form-2" class="underline edit">
+                            <p>edit</p>
+                        </a>
+                        </div>
+                <% } %>
+            </div>
+
+            <br>
+
+            <div id="article-4">
+                <a href="/article-4" class="not_underline">
+                    <% if(locals.blog[3]){ %>
+                        <h1 class="title">
+                            <%= blog[3].title %>
+                        </h1>
+                        </a>
+                        <div>
+                        <a href="/blog-form-3" class="underline edit">
+                            <p>edit</p>
+                        </a>
+                        </div>
+                <% } %>
+            </div>
+
+            <br>
+            
+            <div id="article-5">
+                <a href="/article-5" class="not_underline">
+                    <% if(locals.blog[4]){ %>
+                        <h1 class="title">
+                            <%= blog[4].title %>
+                        </h1>
+                        </a>
+                        <div>
+                        <a href="/blog-form-4" class="underline edit">
+                            <p>edit</p>
+                        </a>
+                        </div>
+                <% } %>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

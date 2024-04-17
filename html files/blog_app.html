@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog_app.css">
+    <title>Blog Publish</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-2">
+            <h1>Blog</h1>
+            <div class="container-3">
+                <div class="container-4">
+                <form action="/submit" method="POST">
+                    <h3 id="Heading"><label for="title">Heading</label></h3>
+                    <input type="text" name="title" class="input" required>
+                    <h3><label for="author">Author</label></h3>
+                    <input type="text" name="author" class="input" required>
+                    <h3><label for="article">Article</h3>
+                    <textarea rows="6" cols="21" name="article" required></textarea><br>
+                    <div class="button">
+                    <input type="submit" value="Publish" id="button">
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

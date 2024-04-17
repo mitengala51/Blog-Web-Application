@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            padding-top: 50px;
+            padding-right: 230px;
+            padding-left: 230px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h3 {
+            margin-top: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h4 {
+            margin-top: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><%= blog[4].title %></h1>
+        <h3><%= blog[4].author %></h3>
+        <h4><%= formattedDate %></h4>
+        <p><%= blog[4].article %></p>
+    </div>
+</body>
+</html>
