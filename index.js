@@ -7,7 +7,12 @@ const app = new express();
 
 app.use(bodyparser.urlencoded({ extended: true }))
 
-app.use(express.static('html files'))
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'html files')));
+app.use(express.static(path.join(__dirname, 'views')));
+
 
 let t,a,a1;
 let index=[];
