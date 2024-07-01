@@ -5,6 +5,8 @@ import bodyparser from "body-parser";
 
 const app = new express();
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 app.use(bodyparser.urlencoded({ extended: true }))
 
 app.set('views', path.join(__dirname, 'views'));
